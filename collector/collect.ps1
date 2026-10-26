@@ -34,8 +34,12 @@ $runId    = (Now-SP).ToString('yyyyMMdd-HHmmss', $inv)
 $catalog = (Get-Content (Join-Path $PSScriptRoot 'series.json') -Raw | ConvertFrom-Json).series
 
 # ---------- utilidades ----------
+$script:HasDateKind = (Get-Command ConvertFrom-Json).Parameters.ContainsKey('DateKind')
 function Read-Json($path, $default) {
-  if (Test-Path $path) { return Get-Content $path -Raw | ConvertFrom-Json -DateKind String } else { return $default }
+  if (-not (Test-Path $path)) { return $default }
+  $txt = Get-Content $path -Raw
+  # -DateKind String (PowerShell 7.5+) preserva datas ISO como texto; versões anteriores não têm o parâmetro.
+  if ($script:HasDateKind) { return $txt | ConvertFrom-Json -DateKind String } else { return $txt | ConvertFrom-Json }
 }
 function Write-Json($path, $obj, [int]$depth = 12) {
   $obj | ConvertTo-Json -Depth $depth -Compress | Set-Content -Path $path -Encoding utf8NoBOM
