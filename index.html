@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--HEAD-START-->
+<title>Pulso Imobiliário</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Observatório do mercado imobiliário: do cenário global a Joinville e Itapoá, com fontes rastreáveis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Instrument+Sans:wght@400;500;600;700&family=Schibsted+Grotesk:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<!--HEAD-END-->
+</head>
+<body>
+<!--BODY-START-->
+<div class="app" id="app">
+  <aside class="side" id="side" aria-label="Menu principal">
+    <div class="brand">
+      <div class="brand-mark"><svg viewBox="0 0 26 14" aria-hidden="true"><path d="M1 8h5l2.5-6 4 11 3-8 1.8 3H25" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><b>Pulso Imobiliário</b><small>Inteligência de mercado</small></div>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-status" id="side-status"></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <div class="content">
+    <div class="topbar">
+      <button type="button" id="menu-btn" aria-label="Abrir menu" aria-controls="side" aria-expanded="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      <b>Pulso Imobiliário</b><span id="top-title"></span>
+    </div>
+    <main class="page" id="main"></main>
+    <footer class="foot">Pulso Imobiliário · Séries oficiais do Banco Central (SGS) e do IBGE (SIDRA), planilha de índices setoriais do usuário, notícias por RSS e vídeos do YouTube, sempre com link para a origem. As análises apoiam a investigação e não substituem estudos de viabilidade.</footer>
+  </div>
+</div>
+<dialog id="news-modal" aria-label="Detalhes da notícia"></dialog>
+<dialog id="video-modal" aria-label="Reprodutor de vídeo"></dialog>
+<!--BODY-END-->
+<script src="data/bundle.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Configuração local do Claude Code
+.claude/
+# Temporários
+*.tmp
+Thumbs.db
+desktop.ini

@@ -1,0 +1,197 @@
+{
+  "curatedAt": "2026-10-25",
+  "curator": "Curadoria inicial feita com IA em 25/10/2026; precisa de revisão humana antes de uso decisório",
+  "periodLabel": "Notícias e documentos de agosto a outubro de 2026; séries oficiais até o último período publicado por cada fonte",
+
+  "syntheses": {
+    "visao": {
+      "title": "Síntese do cenário",
+      "blocks": [
+        { "type": "fato", "text": "O Copom fez o quinto corte seguido da meta Selic, para 13,75% a.a. (em vigor desde 17/09/2026). Ao mesmo tempo, o IPCA acumulado em 12 meses chegou a 4,58% em setembro de 2026, acima do teto de 4,5% da meta.", "refs": ["selic_meta", "ipca_12m"] },
+        { "type": "fato", "text": "As concessões de financiamento imobiliário PF somaram cerca de 22% a mais nos 12 meses até agosto de 2026 do que nos 12 meses anteriores (valores nominais). A taxa média com recursos de mercado ficou em torno de 14% a.a.", "refs": ["fin_imob_concessoes", "fin_imob_taxa"] },
+        { "type": "fato", "text": "Em SC, o custo médio do m² do SINAPI subiu 6,30% em 12 meses até setembro de 2026, 1,7 p.p. acima do IPCA. A desocupação no estado (2,1% no 2º tri de 2026) é muito inferior à média nacional (5,4%).", "refs": ["sinapi_sc_12m", "desocupacao_sc", "desocupacao_br"] },
+        { "type": "inferencia", "text": "O ambiente combina crédito em expansão e juros em queda gradual com custo de obra acima da inflação. Para empreendimentos já precificados, o risco principal parece estar na margem (custo) mais do que na demanda financiada." },
+        { "type": "hipotese", "text": "Se a inflação seguir acima do teto, o ciclo de cortes pode ser interrompido. Isso limitaria a queda das taxas do financiamento imobiliário, que até agora caíram menos que a Selic. A confirmação depende das próximas decisões do Copom (próxima reunião prevista para 3 e 4/11/2026, segundo a imprensa) e da série de taxas." },
+        { "type": "implicacao", "text": "Revisar a sensibilidade das viabilidades ao custo de construção (usar o orçamento próprio ou o CUB/SC, que ainda não está conectado) antes de supor ganhos de demanda com juros menores." }
+      ]
+    },
+    "mundo": {
+      "title": "Leitura internacional",
+      "blocks": [
+        { "type": "fato", "text": "BIS (publicado em 27/08/2026, dados do 1º tri de 2026): os preços residenciais reais globais caíram 1,2% em 12 meses. Nas economias avançadas a queda foi de 0,2% e nas emergentes, de 2,0%. A América Latina teve alta real de 5,0%.", "refs": ["n_bis_q1"] },
+        { "type": "inferencia", "text": "A fraqueza global se concentra na Ásia (China −7%) e em alguns mercados avançados (Canadá −7%). A América Latina segue em outra direção. Não há base para importar a narrativa de queda global para o Brasil." },
+        { "type": "hipotese", "text": "O câmbio relativamente estável (média mensal perto de R$ 5,15/US$ em 2026) reduz a pressão de insumos importados sobre a construção. Isso precisa ser confrontado com os componentes do SINAPI e do INCC.", "refs": ["cambio_usd"] },
+        { "type": "implicacao", "text": "Acompanhar a política monetária das principais economias pelo canal juros e câmbio. Ainda não há série internacional conectada automaticamente (BIS e OECD estão planejados)." }
+      ]
+    },
+    "brasil": {
+      "title": "Leitura Brasil",
+      "blocks": [
+        { "type": "fato", "text": "FipeZap (segundo a imprensa, 14/10/2026): aluguel residencial com alta de 9,13% em 12 meses até setembro e preços de venda anunciados com alta de 5,51%. A fonte primária ainda não foi conferida.", "refs": ["n_fipezap_set"] },
+        { "type": "inferencia", "text": "Aluguéis subindo mais que os preços de venda indicam aumento do rendimento bruto de locação em preços anunciados. Isso pode sustentar a demanda de investidores por unidades compactas." },
+        { "type": "hipotese", "text": "A diferença entre aluguel e venda pode refletir escassez de oferta para locação ou mudança no mix de anúncios. Os índices de preço pedido não permitem separar as duas causas." },
+        { "type": "implicacao", "text": "Antes de definir produto voltado a investidor, confirmar o rendimento de locação local (Joinville e Itapoá) com dados transacionados ou de imobiliárias." }
+      ]
+    },
+    "sc": {
+      "title": "Leitura Santa Catarina",
+      "blocks": [
+        { "type": "fato", "text": "A população estimada de SC chegou a 8,3 milhões em 2026 (IBGE). A desocupação ficou em 2,1% no 2º tri de 2026. O SINAPI-SC teve alta de 6,30% em 12 meses.", "refs": ["pop_sc", "desocupacao_sc", "sinapi_sc_12m"] },
+        { "type": "inferencia", "text": "O mercado de trabalho apertado sustenta a renda, mas também pressiona o custo de mão de obra na construção. O componente de mão de obra do SINAPI-SC deve ser acompanhado." },
+        { "type": "hipotese", "text": "A migração para SC pode manter a demanda habitacional acima da média nacional. O IBGE estima população, mas não decompõe a migração por renda: crescimento populacional não equivale a demanda solvente." },
+        { "type": "implicacao", "text": "Não aplicar médias estaduais a Joinville ou Itapoá. Usar as séries municipais e as pesquisas locais." }
+      ]
+    },
+    "joinville": {
+      "title": "Leitura Joinville",
+      "blocks": [
+        { "type": "fato", "text": "Brain/SINDUSCON Joinville (divulgado em 05/10/2026): no 1º semestre de 2026 foram lançadas 1.010 unidades (16 empreendimentos, VGL de R$ 708 milhões) e vendidas 1.147. O estoque em junho era de 2.459 unidades, e o m² privativo médio, de R$ 11.267 (+7% em 12 meses).", "refs": ["n_joinville_1s26"] },
+        { "type": "inferencia", "text": "Como as vendas superaram os lançamentos em unidades, o estoque tende a girar. VSO semestral aproximado: 1.147 ÷ (2.459 + 1.147) ≈ 31,8%. É um cálculo próprio com dados secundários, e a fórmula está em Fontes e Método." },
+        { "type": "hipotese", "text": "A alta do m² médio pode refletir em parte a mudança de mix: studios subiram 18% e há mais produto compacto de alto padrão. Sem dados por tipologia e bairro com ponderação fixa, não dá para separar valorização de composição." },
+        { "type": "implicacao", "text": "Pedir à Brain/SINDUSCON a abertura por bairro e tipologia antes de concluir que há espaço para novos lançamentos. Conferir os parâmetros da LOT para os terrenos em análise." }
+      ]
+    },
+    "itapoa": {
+      "title": "Leitura Itapoá",
+      "blocks": [
+        { "type": "fato", "text": "A população residente estimada foi de 37.488 em 2026 (IBGE), contra 30.750 no Censo 2022. Pela imprensa, o Porto Itapoá entrou em rota direta com a Europa (serviço Neosamba, Maersk), e a dragagem do canal passou de 70%.", "refs": ["pop_itapoa", "n_porto_europa"] },
+        { "type": "inferencia", "text": "O crescimento populacional é forte: 6,31% a.a. entre 2010 e 2022 pelo Censo. A comparação 2021→2024 da série de estimativas mistura crescimento com recalibração pelo Censo e não deve ser lida como salto anual." },
+        { "type": "hipotese", "text": "A expansão portuária pode gerar demanda por moradia de trabalhadores e por galpões. Parte dessa força de trabalho pode morar em Joinville, Garuva ou São Francisco do Sul. Não há evidência local de demanda solvente por produto residencial específico." },
+        { "type": "implicacao", "text": "Antes de comprar terreno, verificar cobertura de esgotamento sanitário (PMISB), drenagem, acessos e restrições ambientais. Separar a demanda permanente da sazonal (veraneio), que a estimativa do IBGE não capta." }
+      ]
+    }
+  },
+
+  "news": [
+    {
+      "id": "n_copom_set", "date": "2026-09-16", "area": "brasil", "geo": "Brasil", "theme": "juros",
+      "title": "Copom reduz a meta Selic em 0,25 p.p., para 13,75% a.a.",
+      "summary": "Quinto corte consecutivo. A taxa vale a partir de 17/09/2026 segundo a série oficial do SGS. Segundo a imprensa, a próxima reunião está prevista para 3 e 4/11/2026.",
+      "source": "Banco Central do Brasil (SGS 432) e histórico de taxas do Copom", "url": "https://www.bcb.gov.br/controleinflacao/historicotaxasjuros", "primaryUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/10?formato=json",
+      "verification": "Fonte primária consultada (série oficial)",
+      "facts": ["A meta Selic passou de 14,00% para 13,75% a.a. (SGS 432)."],
+      "inferences": ["O repasse para o crédito imobiliário é parcial: a taxa média com recursos de mercado (SGS 20772) caiu menos que a Selic no ano."],
+      "hypotheses": ["Com o IPCA de 12 meses acima do teto, o ritmo de cortes pode desacelerar."],
+      "implications": ["Não antecipar queda proporcional das taxas de financiamento nas premissas de vendas."]
+    },
+    {
+      "id": "n_bis_q1", "date": "2026-08-27", "area": "mundo", "geo": "Mundo", "theme": "precos",
+      "title": "BIS: preços residenciais reais globais caem 1,2% no 1º trimestre de 2026",
+      "summary": "Queda real de 0,2% nas economias avançadas (a primeira desde o 3º tri de 2024) e de 2,0% nas emergentes, puxada pela Ásia. A América Latina teve alta real de 5,0%.",
+      "source": "BIS — Residential property price statistics, Q1 2026", "url": "https://www.bis.org/statistics/pp_residential_2608.htm", "primaryUrl": "https://www.bis.org/statistics/pp_residential_2608.pdf",
+      "verification": "Fonte primária consultada",
+      "facts": ["Global: −1,2% a/a em termos reais. Avançadas: −0,2%. Emergentes: −2,0%. América Latina: +5,0%.", "Maiores quedas: China (−7%), Canadá (−7%), Nova Zelândia (−4%). Maiores altas: Portugal (+15%), Macedônia do Norte (+13%), Bulgária (+11%).", "Desde o 4º tri de 2019: +2,7% real. O destaque do mesmo relatório arredonda para 3%."],
+      "inferences": ["O ciclo internacional está dessincronizado: a América Latina não acompanha a correção asiática."],
+      "hypotheses": [],
+      "implications": ["Tendências globais servem de contexto e não de previsão para o Brasil."]
+    },
+    {
+      "id": "n_fipezap_set", "date": "2026-10-14", "area": "brasil", "geo": "Brasil", "theme": "precos",
+      "title": "FipeZap: aluguel residencial sobe 9,13% em 12 meses até setembro",
+      "summary": "Alta de 0,52% em setembro e de 7,11% no ano. Das 36 cidades monitoradas, 31 tiveram alta no mês. O índice de venda acumula 5,51% em 12 meses.",
+      "source": "Diário do Comércio, com dados do Índice FipeZap", "url": "https://diariodocomercio.com.br/economia/aluguel-sobe-dobro-inflacao-2026/", "primaryUrl": "https://www.fipe.org.br/pt-br/indices/fipezap",
+      "verification": "Reportagem consultada; relatório primário da Fipe não conferido",
+      "facts": ["Locação: +0,52% em set/2026, 7,11% no ano, 9,13% em 12 meses (36 cidades).", "Venda: +5,51% em 12 meses até setembro."],
+      "inferences": ["O aluguel em 12 meses equivale a cerca do dobro do IPCA de 12 meses (4,58%)."],
+      "hypotheses": ["O aumento do rendimento de locação pode atrair investidores para compactos."],
+      "implications": ["FipeZap mede preço anunciado, não transacionado. Confirmar a amostra local antes de usar em Joinville ou Itapoá."]
+    },
+    {
+      "id": "n_joinville_1s26", "date": "2026-10-05", "area": "joinville", "geo": "Joinville", "theme": "mercado",
+      "title": "Joinville: vendas superam lançamentos no 1º semestre de 2026",
+      "summary": "Levantamento da Brain para o SINDUSCON Joinville: 1.010 unidades lançadas e 1.147 vendidas no semestre, estoque de 2.459 unidades em junho e m² privativo médio de R$ 11.267.",
+      "source": "Agência CBIC, com dados de Brain/SINDUSCON Joinville", "url": "https://cbic.org.br/?p=109173", "primaryUrl": null,
+      "verification": "Divulgação de entidade setorial consultada; relatório completo da Brain não disponível",
+      "facts": ["Lançamentos: 16 empreendimentos, 1.010 unidades, VGL de R$ 708 mi. Vendas: 1.147 unidades, R$ 767 mi.", "Estoque em jun/2026: 2.459 unidades, das quais 15,3% são lançamentos de 2026.", "m² privativo médio: R$ 11.267 (+7% em 12 meses). Studios +18%, 3 dorm. +10%, 2 dorm. +8%, 4 dorm. +6,1%."],
+      "inferences": ["VSO semestral aproximado de 31,8% (cálculo próprio)."],
+      "hypotheses": ["Parte da alta do m² médio pode ser efeito de mix (mais studios de alto padrão)."],
+      "implications": ["Pedir a abertura por bairro e tipologia antes de decidir produto e lançamento."]
+    },
+    {
+      "id": "n_porto_europa", "date": "2026-08-05", "area": "itapoa", "geo": "Itapoá", "theme": "infraestrutura",
+      "title": "Porto Itapoá passa a integrar rota direta com a Europa",
+      "summary": "O terminal entrou no serviço Neosamba (Maersk). A reportagem cita dragagem acima de 70% e expectativa de receber navios de até 366 m, sem atribuir a fonte desses números.",
+      "source": "Gazeta do Povo", "url": "https://www.gazetadopovo.com.br/santa-catarina/porto-itapoa-nova-rota-europa-demanda-logistica/", "primaryUrl": "https://www.portoitapoa.com/",
+      "verification": "Reportagem consultada; números não conferidos com a operadora",
+      "facts": ["Ingresso no serviço Neosamba, ligando o terminal ao norte da Europa e a Tânger.", "Nova ligação de cabotagem com Manaus."],
+      "inferences": ["Mais escalas e navios maiores reforçam o porto como vetor econômico regional."],
+      "hypotheses": ["Executivo de gestora imobiliária citado na reportagem prevê demanda por galpões em Itapoá, Garuva, Araquari, Joinville e São Francisco do Sul."],
+      "implications": ["Investigar onde mora a força de trabalho portuária antes de supor demanda residencial em Itapoá."]
+    },
+    {
+      "id": "n_lot_guia", "date": "2026-07-01", "area": "joinville", "geo": "Joinville", "theme": "legislacao",
+      "title": "Prefeitura publica Guia Ilustrado da Lei de Ordenamento Territorial (LOT)",
+      "summary": "A SEPUR publicou um guia explicativo da LOT, o primeiro de uma série de guias de planejamento urbano. Não é uma alteração da lei.",
+      "source": "Prefeitura de Joinville (SEPUR)", "url": "https://www.joinville.sc.gov.br/wp-content/uploads/2026/07/Guia-Ilustrado-Lei-de-Ordenamento-Territorial-LOT-2026.pdf", "primaryUrl": null,
+      "verification": "Documento localizado; conteúdo ainda não revisado pela curadoria. Data aproximada (mês de publicação)",
+      "facts": ["O guia está publicado no portal da Prefeitura, com data de julho de 2026."],
+      "inferences": [],
+      "hypotheses": ["A imprensa noticiou a intenção de revisar a LOT após a revisão do Plano Diretor. O andamento em 2026 não foi confirmado."],
+      "implications": ["Usar o texto consolidado da lei, e não o guia, para validar parâmetros de terreno."]
+    },
+    {
+      "id": "n_itapoa_pmisb", "date": "2024-08-01", "area": "itapoa", "geo": "Itapoá", "theme": "saneamento",
+      "title": "Itapoá: 1ª revisão do Plano Municipal Integrado de Saneamento Básico",
+      "summary": "Documento elaborado pelo consórcio CINCATARINA (ago/2024). Inclui um mapa das áreas urbanas fora das sub-bacias do projeto básico do sistema de esgotamento sanitário.",
+      "source": "CINCATARINA — PMISB Itapoá, Produto 07 (apêndices)", "url": "https://planejamentourbano.cincatarina.sc.gov.br/CMS/Media/itapoapmsb/docs/Produto%2007/1%C2%AA%20rev.%20PMISB%20Itapo%C3%A1%20-%20Produto%2007%20-%20Ap%C3%AAndices.pdf", "primaryUrl": null,
+      "verification": "Lista de apêndices consultada; o corpo do plano não foi revisado. Documento anterior ao período analisado, incluído como referência estrutural",
+      "facts": ["O plano identifica áreas urbanas não incluídas nas sub-bacias do projeto básico de esgoto."],
+      "inferences": [],
+      "hypotheses": [],
+      "implications": ["Na diligência de terrenos em Itapoá, verificar se o lote está em sub-bacia com esgotamento previsto."]
+    }
+  ],
+
+  "manualIndicators": [
+    { "id": "m_jlle_lanc", "area": "joinville", "name": "Unidades lançadas — apartamentos novos", "value": 1010, "unit": "unidades", "period": "jan–jun 2026", "geo": "Joinville", "source": "Brain/SINDUSCON Joinville via Agência CBIC", "url": "https://cbic.org.br/?p=109173", "collected": "2026-10-25", "nature": "Pesquisa privada divulgada por entidade setorial" },
+    { "id": "m_jlle_vend", "area": "joinville", "name": "Unidades vendidas — apartamentos novos", "value": 1147, "unit": "unidades", "period": "jan–jun 2026", "geo": "Joinville", "source": "Brain/SINDUSCON Joinville via Agência CBIC", "url": "https://cbic.org.br/?p=109173", "collected": "2026-10-25", "nature": "Pesquisa privada divulgada por entidade setorial" },
+    { "id": "m_jlle_estoque", "area": "joinville", "name": "Estoque disponível", "value": 2459, "unit": "unidades", "period": "jun/2026", "geo": "Joinville", "source": "Brain/SINDUSCON Joinville via Agência CBIC", "url": "https://cbic.org.br/?p=109173", "collected": "2026-10-25", "nature": "Pesquisa privada divulgada por entidade setorial" },
+    { "id": "m_jlle_vso", "area": "joinville", "name": "VSO semestral aproximado", "value": 31.8, "unit": "% no semestre", "period": "jan–jun 2026", "geo": "Joinville", "source": "Cálculo próprio: vendas do semestre ÷ (estoque final + vendas do semestre)", "url": "https://cbic.org.br/?p=109173", "collected": "2026-10-25", "nature": "Derivado; não é o VSO oficial da pesquisa" },
+    { "id": "m_jlle_m2", "area": "joinville", "name": "Preço médio do m² privativo (oferta)", "value": 11267, "unit": "R$/m²", "period": "jun/2026", "geo": "Joinville", "source": "Brain/SINDUSCON Joinville via Agência CBIC", "url": "https://cbic.org.br/?p=109173", "collected": "2026-10-25", "nature": "Preço de oferta de imóveis novos, sensível ao mix" },
+    { "id": "m_jlle_censo", "area": "joinville", "name": "População residente — Censo 2022", "value": 616317, "unit": "pessoas", "period": "2022", "geo": "Joinville", "source": "IBGE — Censo 2022, SIDRA tabela 4709", "url": "https://sidra.ibge.gov.br/tabela/4709", "collected": "2026-10-25", "nature": "Oficial (coleta pontual via API)" },
+    { "id": "m_jlle_cresc", "area": "joinville", "name": "Crescimento geométrico anual 2010–2022", "value": 1.50, "unit": "% a.a.", "period": "2010–2022", "geo": "Joinville", "source": "IBGE — Censo 2022, SIDRA tabela 4709", "url": "https://sidra.ibge.gov.br/tabela/4709", "collected": "2026-10-25", "nature": "Oficial (coleta pontual via API)" },
+    { "id": "m_ita_censo", "area": "itapoa", "name": "População residente — Censo 2022", "value": 30750, "unit": "pessoas", "period": "2022", "geo": "Itapoá", "source": "IBGE — Censo 2022, SIDRA tabela 4709", "url": "https://sidra.ibge.gov.br/tabela/4709", "collected": "2026-10-25", "nature": "Oficial (coleta pontual via API)" },
+    { "id": "m_ita_cresc", "area": "itapoa", "name": "Crescimento geométrico anual 2010–2022", "value": 6.31, "unit": "% a.a.", "period": "2010–2022", "geo": "Itapoá", "source": "IBGE — Censo 2022, SIDRA tabela 4709", "url": "https://sidra.ibge.gov.br/tabela/4709", "collected": "2026-10-25", "nature": "Oficial (coleta pontual via API)" }
+  ],
+
+  "gaps": {
+    "visao": [],
+    "mundo": ["Séries do BIS e da OECD (preços reais, preço/renda, preço/aluguel) ainda sem conector automático."],
+    "brasil": ["ABRAINC/Fipe: lançamentos, vendas, VSO e distratos. O release foi localizado, mas o conteúdo do PDF não foi extraído nesta versão.", "INCC-M (FGV) vem da planilha do usuário (fonte secundária) e depende de nova importação para atualizar.","FGTS e SBPE (poupança) por fonte primária ainda não conectados."],
+    "sc": ["CUB/SC por projeto-padrão (R1, R8, CSL etc.): a planilha traz só os médios residencial e comercial, e a atualização depende de nova importação.","Emprego formal (Novo CAGED) por município: não conectado.", "Migração: o IBGE não publica série anual; depende do Censo."],
+    "joinville": ["Alvarás, habite-se e áreas aprovadas (Prefeitura): sem série estruturada localizada.", "Abertura por bairro e tipologia (Brain): depende de acesso ao relatório.", "Andamento da revisão da LOT em 2026: não confirmado."],
+    "itapoa": ["Movimentação mensal do Porto Itapoá (TEUs): números só por imprensa; falta fonte primária estruturada.", "População sazonal, locação de temporada e preços locais: sem fonte confiável identificada.", "Zoneamento e plano diretor vigente: documento não localizado nesta versão. O portal da Prefeitura retornou erro de certificado na verificação automática."]
+  },
+
+  "sources": [
+    { "name": "Banco Central do Brasil", "type": "Oficial", "covers": "Selic, crédito imobiliário (taxas, concessões, saldo, inadimplência, prazo), câmbio, IBC-Br e IPCA (repasse do IBGE).", "cadence": "Diária a mensal", "access": "API SGS", "url": "https://www.bcb.gov.br/estatisticas", "status": "automatico" },
+    { "name": "IBGE / SIDRA", "type": "Oficial", "covers": "SINAPI, PNAD Contínua, estimativas de população, Censo 2022, PIB municipal.", "cadence": "Mensal a anual", "access": "API SIDRA", "url": "https://sidra.ibge.gov.br", "status": "automatico" },
+    { "name": "CBIC", "type": "Setorial", "covers": "Lançamentos, vendas, oferta, VGV e tipologia; repercute pesquisas regionais.", "cadence": "Trimestral", "access": "Página / PDF", "url": "https://cbic.org.br/mercado-imobiliario/", "status": "manual" },
+    { "name": "ABRAINC / Fipe", "type": "Setorial", "covers": "Amostra de incorporadoras associadas: lançamentos, vendas, VSO e distratos.", "cadence": "Mensal", "access": "PDF", "url": "https://www.abrainc.org.br", "status": "planejado", "statusNote": "Release localizado, mas sem extração automática do PDF nesta versão." },
+    { "name": "FipeZap", "type": "Proxy de preços", "covers": "Preço pedido em anúncios (venda e locação); não representa preço transacionado.", "cadence": "Mensal", "access": "Planilha / PDF", "url": "https://www.fipe.org.br/pt-br/indices/fipezap", "status": "manual", "statusNote": "Usado via reportagem; relatório primário ainda não conferido." },
+    { "name": "Prefeitura de Joinville", "type": "Oficial local", "covers": "Urbanismo (LOT, Plano Diretor), licenças, dados municipais.", "cadence": "Contínua", "access": "Página / documentos", "url": "https://www.joinville.sc.gov.br", "status": "manual" },
+    { "name": "Prefeitura de Itapoá", "type": "Oficial local", "covers": "Urbanismo, legislação, infraestrutura e publicações municipais.", "cadence": "Contínua", "access": "Portal / documentos", "url": "https://itapoa.sc.gov.br", "status": "planejado", "statusNote": "Endereço não confirmado: a verificação automática falhou por erro de certificado SSL." },
+    { "name": "CINCATARINA", "type": "Oficial (consórcio)", "covers": "Planos municipais de saneamento e planejamento urbano de Itapoá.", "cadence": "Por projeto", "access": "Documentos", "url": "https://planejamentourbano.cincatarina.sc.gov.br", "status": "manual" },
+    { "name": "Porto Itapoá", "type": "Corporativa", "covers": "Movimentação, investimentos e atividade portuária.", "cadence": "Anual / comunicados", "access": "Relatório / site", "url": "https://www.portoitapoa.com/", "status": "planejado" },
+    { "name": "SINDUSCON Grande Florianópolis (CUB/SC)", "type": "Setorial", "covers": "CUB/SC residencial e comercial médio, referência da NBR 12.721.", "cadence": "Mensal", "access": "Planilha do usuário", "url": "https://sinduscon-fpolis.org.br", "status": "planilha", "statusNote": "Série histórica desde jan/2012 importada da planilha do usuário; atualização por nova importação." },
+    { "name": "SINDUSCON Joinville", "type": "Setorial", "covers": "CUB regional e pesquisas do mercado imobiliário de Joinville (Brain).", "cadence": "Mensal / semestral", "access": "Site", "url": "https://www.sinduscon-joinville.org.br/v2021/", "status": "manual" },
+    { "name": "Dados de Mercado (INCC-M da FGV)", "type": "Agregador de dados", "covers": "INCC-M mensal desde 2000, repassado da FGV IBRE.", "cadence": "Mensal", "access": "Planilha do usuário", "url": "https://www.dadosdemercado.com.br/indices/incc-m", "status": "planilha", "statusNote": "Fonte secundária do índice da FGV, via planilha do usuário." },
+    { "name": "YouTube", "type": "Vídeos", "covers": "Canais do setor (Secovi-SP, CBIC, Brain, Imobi Report, ADIT) e canais gerais filtrados por relevância.", "cadence": "Diária", "access": "RSS dos canais + API oficial (opcional)", "url": "https://www.youtube.com", "status": "automatico" },
+    { "name": "Feeds de notícias (15 sites)", "type": "Imprensa e entidades", "covers": "CBIC, Secovi-SP, SindusCon-SP, SINDUSCON Grande Florianópolis, Portas, Imobi Report, Money Times, Cimento Itambé, Agência Brasil, InfoMoney, Valor, Estadão, Diário do Comércio, NSC Total, ND Mais.", "cadence": "Diária", "access": "RSS", "url": null, "status": "automatico", "statusNote": "Situação de cada feed na tabela abaixo." },
+    { "name": "BIS", "type": "Oficial internacional", "covers": "Preços residenciais reais e nominais comparáveis entre países.", "cadence": "Trimestral", "access": "CSV / API (data.bis.org)", "url": "https://data.bis.org/topics/RPP", "status": "manual", "statusNote": "Release consultado manualmente; conector SDMX planejado." },
+    { "name": "OECD", "type": "Oficial internacional", "covers": "Índices de preço, preço/renda e preço/aluguel.", "cadence": "Trimestral", "access": "Data Explorer / API", "url": "https://data-explorer.oecd.org", "status": "planejado" },
+    { "name": "Brain Inteligência Estratégica", "type": "Pesquisa setorial", "covers": "Oferta, demanda, intenção de compra e estudos de mercado (inclusive Joinville).", "cadence": "Periódica", "access": "Pesquisas / artigos", "url": "https://brain.srv.br", "status": "manual", "statusNote": "Dados de Joinville usados por meio da divulgação do SINDUSCON." },
+    { "name": "DataStore", "type": "Pesquisa privada", "covers": "Demanda imobiliária, consumidor, produto e intenção de compra.", "cadence": "Periódica", "access": "Pesquisas / monitor", "url": "https://www.datastore.com.br", "status": "planejado", "statusNote": "O site recusou a verificação automática (HTTP 406); endereço a confirmar no navegador." },
+    { "name": "Metrô Quadrado", "type": "Imprensa especializada", "covers": "Notícias, negócios, projetos e movimentos do mercado imobiliário.", "cadence": "Contínua", "access": "Portal", "url": "https://www.metroquadrado.com", "status": "planejado" },
+    { "name": "Luciana Ferreira", "type": "LinkedIn (especialista)", "covers": "Crédito, mercado imobiliário, incorporadoras e MCMV.", "cadence": "Contínua", "access": "Publicações", "url": null, "status": "perfil_a_confirmar" },
+    { "name": "Alexsandro Nascimento Silva", "type": "LinkedIn (especialista)", "covers": "Construção civil, construtoras e incorporadoras.", "cadence": "Contínua", "access": "Publicações", "url": null, "status": "perfil_a_confirmar" },
+    { "name": "Rubens Domingues Ribeiro", "type": "LinkedIn (especialista)", "covers": "Estratégia empresarial e casos de incorporadoras.", "cadence": "Contínua", "access": "Publicações", "url": null, "status": "perfil_a_confirmar" },
+    { "name": "Carolina Caribé Marques", "type": "LinkedIn (especialista)", "covers": "Estratégia de produto, aderência à demanda, VSO e decisões de incorporação.", "cadence": "Contínua", "access": "Publicações", "url": null, "status": "perfil_a_confirmar" },
+    { "name": "Professor Jamil Rahme", "type": "LinkedIn (especialista)", "covers": "Aspectos técnicos, jurídicos e comerciais da incorporação; NBR 12.721.", "cadence": "Contínua", "access": "Publicações", "url": null, "status": "perfil_a_confirmar" }
+  ],
+
+  "linkedinPosts": [
+    "https://lnkd.in/p/dCs_YRhy", "https://lnkd.in/p/ddvJFW78", "https://lnkd.in/p/dCTH2Tid", "https://lnkd.in/p/d2e64gFv",
+    "https://lnkd.in/p/dENFmtYh", "https://lnkd.in/p/daVwSR4g", "https://lnkd.in/p/dKcM7g5u"
+  ]
+}

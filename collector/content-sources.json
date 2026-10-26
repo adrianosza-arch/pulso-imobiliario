@@ -1,0 +1,61 @@
+{
+  "_comment": "Fontes de notícias (RSS) e vídeos (YouTube). 'setorial' = fonte dedicada ao setor (aceita itens com relevância mínima 1); 'geral' = veículo amplo (exige relevância 2+). Termos sem acento e em minúsculas.",
+  "keywords": {
+    "strong": ["imobiliari", "imovel", "imoveis", "incorporador", "incorporacao", "construcao civil", "construtora", "loteamento", "credito imobiliario", "financiamento imobiliario", "financiamento habitacional", "minha casa, minha vida", "minha casa minha vida", "mcmv", "sbpe", "aluguel", "locacao residencial", "cub", "incc", "sinapi", "plano diretor", "zoneamento", "lancamentos residenciais", "vgv", "distrato", "habitacao", "habitacional", "moradia", "fundos imobiliarios", "fii", "ifix", "secovi", "sinduscon", "cbic", "abrainc", "fipezap", "metro quadrado", "m²", "incorporadoras", "porto itapoa"],
+    "weak": ["construcao", "obra", "terreno", "condominio", "apartamento", "casa propria", "juros", "selic", "fgts", "poupanca", "urbanismo", "saneamento", "infraestrutura", "joinville", "itapoa", "santa catarina", "reforma tributaria", "cimento", "aco", "mao de obra"]
+  },
+  "themes": {
+    "credito": ["credito imobiliario", "financiamento", "sbpe", "fgts", "poupanca", "juros", "selic", "taxa", "lci", "lig", "cri"],
+    "custos": ["cub", "incc", "sinapi", "custo da construcao", "custos da construcao", "insumo", "cimento", "aco", "mao de obra"],
+    "mercado": ["lancamento", "vendas", "estoque", "vgv", "vso", "preco", "valoriza", "fipezap", "metro quadrado", "incorporadora", "demanda"],
+    "locacao": ["aluguel", "locacao", "inquilino", "temporada"],
+    "habitacao": ["minha casa", "mcmv", "habitac", "moradia", "deficit habitacional"],
+    "legislacao": ["plano diretor", "zoneamento", "lei ", "projeto de lei", "reforma tributaria", "regulament", "norma", "nbr", "licenciamento", "alvara"],
+    "investimento": ["fundos imobiliarios", "fii", "ifix", "investidor", "rentabilidade", "dividendos"],
+    "infraestrutura": ["porto", "rodovia", "saneamento", "mobilidade", "obra publica", "infraestrutura", "dragagem"]
+  },
+  "geo": {
+    "Joinville": ["joinville"],
+    "Itapoá": ["itapoa"],
+    "Santa Catarina": ["santa catarina", " sc ", "(sc)", "florianopolis", "balneario camboriu", "blumenau", "itajai", "itapema", "jaragua do sul", "sao francisco do sul", "catarinense"],
+    "Mundo": ["eua", "estados unidos", "china", "europa", "global", "mundial", "fed ", "federal reserve"]
+  },
+  "news": [
+    { "name": "CBIC", "url": "https://cbic.org.br/feed/", "site": "https://cbic.org.br", "kind": "setorial" },
+    { "name": "Secovi-SP", "url": "https://www.secovi.com.br/feed", "site": "https://www.secovi.com.br", "kind": "setorial" },
+    { "name": "SindusCon-SP", "url": "https://sindusconsp.com.br/feed/", "site": "https://sindusconsp.com.br", "kind": "setorial" },
+    { "name": "SINDUSCON Grande Florianópolis", "url": "https://sinduscon-fpolis.org.br/feed/", "site": "https://sinduscon-fpolis.org.br", "kind": "setorial" },
+    { "name": "Portas", "url": "https://portas.com.br/feed/", "site": "https://portas.com.br", "kind": "setorial" },
+    { "name": "Imobi Report", "url": "https://imobireport.com.br/feed/", "site": "https://imobireport.com.br", "kind": "setorial" },
+    { "name": "Money Times — Imóveis", "url": "https://www.moneytimes.com.br/tag/imoveis/feed/", "site": "https://www.moneytimes.com.br", "kind": "setorial" },
+    { "name": "Cimento Itambé (Massa Cinzenta)", "url": "https://www.cimentoitambe.com.br/feed/", "site": "https://www.cimentoitambe.com.br", "kind": "setorial" },
+    { "name": "Agência Brasil — Economia", "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml", "site": "https://agenciabrasil.ebc.com.br", "kind": "geral" },
+    { "name": "InfoMoney", "url": "https://www.infomoney.com.br/feed/", "site": "https://www.infomoney.com.br", "kind": "geral" },
+    { "name": "Valor Econômico", "url": "https://valor.globo.com/rss/valor", "site": "https://valor.globo.com", "kind": "geral" },
+    { "name": "Estadão — Economia", "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/economia/", "site": "https://www.estadao.com.br", "kind": "geral" },
+    { "name": "Diário do Comércio", "url": "https://diariodocomercio.com.br/feed/", "site": "https://diariodocomercio.com.br", "kind": "geral" },
+    { "name": "NSC Total", "url": "https://www.nsctotal.com.br/feed", "site": "https://www.nsctotal.com.br", "kind": "geral" },
+    { "name": "ND Mais", "url": "https://ndmais.com.br/feed/", "site": "https://ndmais.com.br", "kind": "geral" }
+  ],
+  "youtube": {
+    "_comment": "RSS dos canais não usa cota. Com YOUTUBE_API_KEY definida, usa playlistItems.list (1 unidade por canal) e, opcionalmente, search.list (100 unidades por consulta, limitado por maxSearchPerRun).",
+    "maxSearchPerRun": 2,
+    "searchQueries": ["mercado imobiliário", "incorporação imobiliária", "crédito imobiliário", "mercado imobiliário Joinville", "construção civil custos CUB INCC", "Itapoá porto"],
+    "channels": [
+      { "name": "Secovi-SP", "id": "UCwcUuPdjP5qKAyCbl1cgQBQ", "kind": "setorial" },
+      { "name": "CBIC", "id": "UCgN4gOIYYT9-t4NVr2IoIsQ", "kind": "setorial" },
+      { "name": "Brain Inteligência", "id": "UCua9cfUMIVfDmrRcSshzaeA", "kind": "setorial" },
+      { "name": "Imobi Report", "id": "UCej8JEZuypZQiRGrqq9seDw", "kind": "setorial" },
+      { "name": "ADIT Brasil", "id": "UCF5sGJ7wUCq_aIMxyBNa-7g", "kind": "setorial" },
+      { "name": "Podcast Condomínios Brasil", "id": "UCHyvds69FYncbKZX0Fky1_A", "kind": "geral" },
+      { "name": "Fipe", "id": "UC7q9YUY6Cn3SFLs0TNkF6QQ", "kind": "geral" },
+      { "name": "Banco Central do Brasil", "id": "UClA-_oUCrc_DQ1PxWtaKHXw", "kind": "geral" },
+      { "name": "Balanço Geral Joinville", "id": "UCWX70TFNwDsBLYlRzOe_-zw", "kind": "geral" },
+      { "name": "CNN Brasil", "id": "UCvdwhh_fDyWccR42-rReZLw", "kind": "geral" },
+      { "name": "InfoMoney", "id": "UCxm0tptjIc76-i26EKQ9NpA", "kind": "geral" },
+      { "name": "Ágora Investimentos", "id": "UCWbptFn7mT9OMHX4ErtenJg", "kind": "geral" },
+      { "name": "XP Investimentos", "id": "UCf15n72n6pV0RK6-GOi1s1Q", "kind": "geral" },
+      { "name": "Valor Econômico", "id": "UC48mLXk1ASg1EQbaS3MheWQ", "kind": "geral" }
+    ]
+  }
+}

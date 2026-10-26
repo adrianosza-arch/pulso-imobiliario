@@ -1,0 +1,44 @@
+# Coleta diária do Pulso Imobiliário — 07h15 em America/Sao_Paulo (10h15 UTC; o Brasil não adota horário de verão desde 2019).
+# Roda nos servidores do GitHub: não depende do computador nem do navegador do usuário.
+# O GitHub pode atrasar execuções agendadas em alguns minutos em horários de pico.
+name: Coleta diária
+
+on:
+  schedule:
+    - cron: '15 10 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coleta
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Executar coletor
+        shell: pwsh
+        env:
+          # Opcional: crie o secret YOUTUBE_API_KEY em Settings → Secrets and variables → Actions.
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          $trigger = if ('${{ github.event_name }}' -eq 'schedule') { 'agendado' } else { 'manual' }
+          ./collector/collect.ps1 -Trigger $trigger
+
+      - name: Gerar snapshot de arquivo único
+        shell: pwsh
+        run: ./scripts/build-snapshot.ps1
+
+      - name: Publicar dados no repositório
+        run: |
+          git config user.name "pulso-coletor"
+          git config user.email "pulso-coletor@users.noreply.github.com"
+          git add data dist
+          git diff --cached --quiet || git commit -m "Coleta $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
